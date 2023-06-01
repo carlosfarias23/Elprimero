@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<!-- This is an HTML5 file -->
+<html>
+  <!-- The root element -->
+  <head>
+    <link rel="stylesheet" href="index.css" >
+    <!-- Title, scripts & styles can go here -->
+    <script src="index.js" ></script>
+    <title>Digital Clock</title>
+    <style>
+      /* A CSS stylesheet for the clock */
+      #clock {
+        /* Styles apply to element with id="clock" */
+        font: bold 24px sans-serif; /* Use a big bold font */
+        background: #ddf; /* on a light bluish-gray background. */
+        padding: 15px; /* Surround it with some space */
+        border: solid black 2px; /* and a solid black border */
+        border-radius: 10px; /* with rounded corners. */
+      }
+    </style>
+  </head>
+  <body>
+    
+    <h1>Digital Clock</h1>
+    <p id="clock"></p>
+    <h2>Asignacion de mesa</h2>
+    <input id="mesa" type="number" />
+    <p id="suma"></p>
+    <button id="boton"> hola bienbenido </button>
+    <h3>¿Hijos?</h3>
+    <label>
+      <input type="radio" name="hijos" value="si">si
+      </label>
+    <label>
+      <input type="radio" name="hijos" value="no">no
+    </label>
+      <!-- We will insert the time into this element. -->
+    <script>
+      var botondkrlos=document.querySelector("#boton")
+      var cantidadPersonas=document.querySelector("#mesa")
+      botondkrlos.addEventListener("click", ()=>{asignarOReservaMesa(cantidadPersonas.value)  })
+      const checkbox=document.querySelector("#")
+      function displayTime() {
+        console.log("IMPRIME ALGO AQUI");
+        let clock = document.querySelector("#clock"); // Get element with id="clock"
+        let now = new Date();
+        clock.textContent = now.toLocaleTimeString(); // Display time in the clock
+        let textoDeEntrada = document.querySelector("#texto");
+        consodle.log(textoDeEntrada.value);
+        let sumaTexto = document.querySelector("#suma");
+        sumaTexto.textContent = parseFloat(textoDeEntrada.value) + 10.5;
+      }
+      displayTime(); // Display the time right away
+      setInterval(displayTime, 1000); // And then update it every second.
+    </script>
+  </body>
+
+</html>
